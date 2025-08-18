@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8F998AFE-23FA-3B3D-875B-FBB74495019D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>upnp_static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">upnp_static.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libupnpsd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)build\upnp\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">upnp_static.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libupnps</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Projects/pupnp-branch-1.14.x/build/pthreads/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;UPNP_STATIC_LIB;LIBUPNP_EXPORTS;STATS;DEBUG;UPNP_USE_MSVCPP;_LARGE_FILES</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;UPNP_STATIC_LIB;LIBUPNP_EXPORTS;STATS;DEBUG;UPNP_USE_MSVCPP;_LARGE_FILES;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Projects/pupnp-branch-1.14.x/build/pthreads/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SupportJustMyCode>
+      </SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UPNP_STATIC_LIB;LIBUPNP_EXPORTS;UPNP_USE_MSVCPP;_LARGE_FILES</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UPNP_STATIC_LIB;LIBUPNP_EXPORTS;UPNP_USE_MSVCPP;_LARGE_FILES;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(SolutionDir)upnp\src\api\upnpapi.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\upnpdebug.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpActionComplete.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpActionRequest.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpDiscovery.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpEvent.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpEventSubscribe.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpExtraHeaders.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpFileInfo.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpStateVarComplete.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpStateVarRequest.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpString.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\UpnpSubscriptionRequest.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\client_table\GenlibClientSubscription.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\client_table\client_table.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\miniserver\miniserver.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\net\sock.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\net\http\httpparser.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\net\http\httpreadwrite.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\net\http\parsetools.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\net\http\statcodes.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\net\http\webserver.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\net\uri\uri.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\service_table\service_table.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\util\list.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\util\membuffer.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\util\strintmap.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\genlib\util\util.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\threadutil\FreeList.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\threadutil\LinkedList.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\threadutil\ThreadPool.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\threadutil\TimerThread.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\urlconfig\urlconfig.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\gena\gena_device.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\gena\gena_ctrlpt.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\gena\gena_callback2.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\soap\soap_device.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\soap\soap_ctrlpt.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\soap\soap_common.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\ssdp\SSDPResultData.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\ssdp\SSDPResultDataCallback.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\ssdp\ssdp_device.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\ssdp\ssdp_ctrlpt.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\ssdp\ssdp_server.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\uuid\md5.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\uuid\sysdep.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\uuid\uuid.c" />
+    <ClCompile Include="$(SolutionDir)upnp\src\api\upnptools.c" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)build\ZERO_CHECK.vcxproj">
+      <Project>{9C408167-BBA2-39BC-BD08-5D6DEB2A3F1A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="$(SolutionDir)build\ixml\ixml_static.vcxproj">
+      <Project>{DC085047-D57F-3345-8CBA-6468118E55F0}</Project>
+      <Name>ixml_static</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

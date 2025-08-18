@@ -1,0 +1,102 @@
+# 基于LLVM代码风格
+BasedOnStyle: LLVM
+
+# 基本格式设置
+SortIncludes: Never          # 不自动排序include语句
+IndentWidth: 4               # 缩进宽度为4个空格
+ColumnLimit: 240             # 每行最大字符数
+UseTab: Never                # 不使用Tab，使用空格
+IndentCaseLabels: true       # case标签缩进
+IndentPPDirectives: AfterHash # 预处理指令在#后缩进
+
+# 函数格式
+AllowShortFunctionsOnASingleLine: false # 禁止短函数写在一行
+
+
+# 对齐设置
+AlignConsecutiveAssignments:    # 对齐连续赋值语句
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+
+AlignConsecutiveBitFields:      # 对齐连续位字段
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+
+AlignConsecutiveDeclarations:   # 对齐连续声明
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+
+AlignConsecutiveMacros:         # 对齐连续宏定义
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+
+AlignConsecutiveShortCaseStatements: # 对齐短case语句
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+
+AlignConsecutiveTableGenBreakingDAGArgColons:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+
+AlignConsecutiveTableGenDefinitionColons:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+
+AlignTrailingComments:          # 对齐尾随注释
+  Kind: Always
+  OverEmptyLines: 0
+
+# 同行注释设置
+SpacesBeforeTrailingComments: 2 # 同行注释前最少2个空格
+
+BinPackArguments: false         # 禁止将参数/元素打包到同一行
+AllowAllArgumentsOnNextLine: false # 禁止所有参数都放在下一行
+
+# 大括号换行设置
+BreakBeforeBraces: Custom       # 自定义大括号换行规则
+BraceWrapping:
+  AfterEnum: true               # 枚举后换行
+  AfterStruct: true             # 结构体后换行
+  AfterClass: true              # 类后换行
+  AfterFunction: true           # 函数后换行
+  AfterCaseLabel: true          # case标签后换行
+  AfterControlStatement: true   # 控制语句后换行
+  AfterExternBlock: true        # extern块后换行
+  SplitEmptyFunction: true      # 空函数分行
+  BeforeWhile: true             # while前换行
+  BeforeCatch: true             # catch前换行
+  BeforeElse: true              # else前换行
+  BeforeLambdaBody: true        # lambda体前换行
+
+# 括号内空格设置
+SpacesInParens: Custom          # 自定义圆括号内空格
+SpacesInParensOptions:
+  ExceptDoubleParentheses: false
+  InConditionalStatements: true # 条件语句中添加空格
+  InCStyleCasts: true           # C风格转换中添加空格
+  InEmptyParentheses: false     # 空括号内不添加空格
+  Other: true                   # 其他情况添加空格
+
+# 括号前空格设置
+SpaceBeforeParens: Custom       # 自定义圆括号前空格
+SpaceBeforeParensOptions:
+  AfterControlStatements: false # 控制语句后不添加空格
+
+# 设置<>和[]括号内的空格
+SpacesInAngles: Always
+SpacesInSquareBrackets: true
+
+# 设置访问修饰符对齐
+# AccessModifierOffset: -4        # 注释掉，保持访问修饰符原位置
+IndentAccessModifiers: false    # 访问修饰符不额外缩进
+
+# 其他格式设置
+AlignEscapedNewlines: Left      # 转义换行符左对齐
+

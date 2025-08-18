@@ -1,0 +1,2 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2189,5): warning MSB9008: The referenced project C:\Projects\pupnp\build\ixml\ixml_static.vcxproj does not exist.
+  upnp_static.vcxproj -> C:\Projects\pupnp\x64\Debug\libupnpsd.lib

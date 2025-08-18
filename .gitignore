@@ -39,3 +39,16 @@
 
 # debug information files
 *.dwo
+
+# vs/vscode
+.vscode/*
+.vs/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# special
+*/x64/**
+!tools/**

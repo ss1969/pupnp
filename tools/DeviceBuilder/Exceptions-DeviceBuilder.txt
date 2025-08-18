@@ -1,0 +1,25 @@
+Please e-mail these exceptions to Ylian Saint-Hilaire, ylian.saint-hilaire@intel.com.
+
+********** 2025/8/15 11:41:21
+System.Reflection.TargetInvocationException: 调用的目标发生了异常。 ---> System.Xml.XmlException: 根级别上的数据无效。 行 1，位置 1。
+   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   在 System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   在 OpenSource.UPnP.UPnPService.ParseSCPD(String XML) 位置 C:\Projects\Developer-Tools-for-UPnP-Technologies\Global\UPnP\UPnPService.cs:行号 2418
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.RuntimeMethodHandle._InvokeMethodFast(Object target, Object[] arguments, SignatureStruct& sig, MethodAttributes methodAttributes, RuntimeTypeHandle typeOwner)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   在 System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   在 System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   在 OpenSource.UPnP.UPnPDebugObject.InvokeNonStaticMethod(String MethodName, Object[] Arg) 位置 C:\Projects\Developer-Tools-for-UPnP-Technologies\Global\UPnP\UPnPDebugObject.cs:行号 67
+   在 OpenSource.UPnP.ServiceGenerator.GenerateServiceFromSCPD(String SCPD_XML) 位置 C:\Projects\Developer-Tools-for-UPnP-Technologies\Tools\DeviceBuilder\ServiceGenerator.cs:行号 450
+   在 UPnPStackBuilder.MainForm.addServiceMenuItem_Click(Object sender, EventArgs e) 位置 C:\Projects\Developer-Tools-for-UPnP-Technologies\Tools\DeviceBuilder\MainForm.cs:行号 2036
+   在 System.Windows.Forms.MenuItem.OnClick(EventArgs e)
+   在 System.Windows.Forms.Command.Invoke()
+   在 System.Windows.Forms.Control.WmCommand(Message& m)
+   在 System.Windows.Forms.Control.WndProc(Message& m)
+   在 System.Windows.Forms.TreeView.WndProc(Message& m)
+   在 System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   在 System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+0.01
