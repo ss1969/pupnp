@@ -74,7 +74,7 @@
       <AdditionalDependencies>libupnps.lib;ixmls.lib;ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)HeadphoneDevice/*.xml" "$(TargetDir)" /Y /I</Command>
+      <Command>xcopy "$(SolutionDir)HeadphoneDevice\*.xml" "$(TargetDir)" /Y /I</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

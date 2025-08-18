@@ -1,1 +1,12 @@
-﻿  ixml_static.vcxproj -> C:\Projects\pupnp\x64\Debug\ixmlsd.lib
+﻿  attr.c
+  document.c
+  element.c
+  ixml.c
+  ixmldebug.c
+  ixmlmembuf.c
+  ixmlparser.c
+  namedNodeMap.c
+  node.c
+  nodeList.c
+  Generating Code...
+  ixml_static.vcxproj -> C:\Projects\pupnp\x64\Debug\ixmlsd.lib

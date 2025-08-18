@@ -51,4 +51,7 @@
 
 # special
 */x64/**
+**/Debug/**
+**/Release/**
 !tools/**
+

@@ -1,2 +1,171 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(2189,5): warning MSB9008: The referenced project C:\Projects\pupnp\build\ixml\ixml_static.vcxproj does not exist.
+  upnpapi.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/api/upnpapi.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/api/upnpapi.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/api/upnpapi.c')
+  
+  upnpdebug.c
+  UpnpActionComplete.c
+  UpnpActionRequest.c
+  UpnpDiscovery.c
+  UpnpEvent.c
+  UpnpEventSubscribe.c
+  UpnpExtraHeaders.c
+  UpnpFileInfo.c
+  UpnpStateVarComplete.c
+  UpnpStateVarRequest.c
+  UpnpString.c
+  UpnpSubscriptionRequest.c
+  GenlibClientSubscription.c
+  client_table.c
+  miniserver.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/miniserver/miniserver.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/miniserver/miniserver.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/miniserver/miniserver.c')
+  
+C:\Projects\pupnp\upnp\src\genlib\miniserver\miniserver.c(1329,4): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+  sock.c
+C:\Projects\pupnp\upnp\src\genlib\net\sock.c(230,22): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\pupnp\upnp\src\genlib\net\sock.c(248,7): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+  httpparser.c
+  httpreadwrite.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/http/httpreadwrite.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/http/httpreadwrite.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/http/httpreadwrite.c')
+  
+  parsetools.c
+  Generating Code...
+  Compiling...
+  statcodes.c
+  webserver.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/http/webserver.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/http/webserver.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/http/webserver.c')
+  
+  uri.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/uri/uri.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/uri/uri.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/genlib/net/uri/uri.c')
+  
+  service_table.c
+  list.c
+  membuffer.c
+  strintmap.c
+  util.c
+  FreeList.c
+  LinkedList.c
+  ThreadPool.c
+  TimerThread.c
+  urlconfig.c
+  gena_device.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/gena/gena_device.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/gena/gena_device.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/gena/gena_device.c')
+  
+  gena_ctrlpt.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/gena/gena_ctrlpt.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/gena/gena_ctrlpt.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/gena/gena_ctrlpt.c')
+  
+  gena_callback2.c
+  soap_device.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/soap/soap_device.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/soap/soap_device.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/soap/soap_device.c')
+  
+  soap_ctrlpt.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/soap/soap_ctrlpt.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/soap/soap_ctrlpt.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/soap/soap_ctrlpt.c')
+  
+  soap_common.c
+  SSDPResultData.c
+  Generating Code...
+  Compiling...
+  SSDPResultDataCallback.c
+  ssdp_device.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_device.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_device.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_device.c')
+  
+C:\Projects\pupnp\upnp\src\ssdp\ssdp_device.c(285,40): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\pupnp\upnp\src\ssdp\ssdp_device.c(360,4): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+  ssdp_ctrlpt.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_ctrlpt.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_ctrlpt.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_ctrlpt.c')
+  
+C:\Projects\pupnp\upnp\src\ssdp\ssdp_ctrlpt.c(727,5): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\pupnp\upnp\src\ssdp\ssdp_ctrlpt.c(745,5): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+C:\Projects\pupnp\upnp\src\ssdp\ssdp_ctrlpt.c(766,5): warning C4267: 'function': conversion from 'size_t' to 'int', possible loss of data
+  ssdp_server.c
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(134,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_server.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(135,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_server.c')
+  
+C:\Projects\pupnp\upnp\src\inc\upnpapi.h(167,9): warning C4068: unknown pragma 'GCC'
+  (compiling source file 'src/ssdp/ssdp_server.c')
+  
+  md5.c
+  sysdep.c
+  uuid.c
+  upnptools.c
+  Generating Code...
   upnp_static.vcxproj -> C:\Projects\pupnp\x64\Debug\libupnpsd.lib
