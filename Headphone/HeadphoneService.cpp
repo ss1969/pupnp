@@ -1,4 +1,4 @@
-#include "HeadphoneService.h"
+﻿#include "HeadphoneService.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -76,6 +76,12 @@ bool HeadphoneService::SetVolume( unsigned char volume )
         std::lock_guard< std::mutex > lock( m_volumeMutex );
         m_currentVolume = volume;
     }
+    
+    // 更新GUI窗口显示
+    if( m_volumeWindow.IsWindowCreated() )
+    {
+        m_volumeWindow.SetVolume( volume );
+    }
 
     // 准备发送事件通知
     char xml[ 256 ];
@@ -97,13 +103,36 @@ bool HeadphoneService::SetVolume( unsigned char volume )
     }
 
     // 发送状态变更事件
-    int ret = UpnpNotifyExt( m_deviceHandle, "uuid:headphone-device-1", "urn:upnp-org:serviceId:HeadphoneVolume", doc );
+    int ret = UpnpNotifyExt( m_deviceHandle, "uuid:JBLHeadphoneDevice-12345678", "urn:upnp-org:serviceId:HeadphoneVolume", doc );
 
     // 清理文档
     ixmlDocument_free( doc );
 
     printf( "音量已设置为: %d%%\n", volume );
     return ( ret == UPNP_E_SUCCESS );
+}
+
+void HeadphoneService::ShowVolumeWindow()
+{
+    if( !m_volumeWindow.IsWindowCreated() )
+    {
+        m_volumeWindow.CreateServiceWindow( "耳机设备 - 当前音量" );
+        m_volumeWindow.SetVolume( m_currentVolume );
+    }
+    m_volumeWindow.Show();
+}
+
+void HeadphoneService::HideVolumeWindow()
+{
+    m_volumeWindow.Hide();
+}
+
+void HeadphoneService::ProcessWindowMessages()
+{
+    if( m_volumeWindow.IsWindowCreated() )
+    {
+        m_volumeWindow.ProcessMessages();
+    }
 }
 
 int HeadphoneService::ActionHandler( Upnp_EventType eventType, UpnpActionRequest *request )
@@ -139,19 +168,48 @@ int HeadphoneService::ActionHandler( Upnp_EventType eventType, UpnpActionRequest
                             actionResult = ixmlParseBuffer( response );
                             if( !actionResult )
                             {
+                                ixmlNodeList_free( volumeList );
                                 UpnpActionRequest_set_ErrCode( request, UPNP_E_INTERNAL_ERROR );
                                 return UPNP_E_INTERNAL_ERROR;
                             }
 
                             UpnpActionRequest_set_ActionResult( request, actionResult );
                             UpnpActionRequest_set_ErrCode( request, UPNP_E_SUCCESS );
-                            ixmlDocument_free( actionResult );  
+                            ixmlNodeList_free( volumeList );
+                            // 注意：不要在这里释放actionResult，UPnP库会自动处理
                             return UPNP_E_SUCCESS;
                         }
+                        else
+                        {
+                            // SetVolume失败
+                            ixmlNodeList_free( volumeList );
+                            UpnpActionRequest_set_ErrCode( request, UPNP_E_INTERNAL_ERROR );
+                            return UPNP_E_INTERNAL_ERROR;
+                        }
                     }
+                    else
+                    {
+                        // 无法获取音量值
+                        if( volumeList )
+                            ixmlNodeList_free( volumeList );
+                        UpnpActionRequest_set_ErrCode( request, UPNP_SOAP_E_INVALID_ARGS );
+                        return UPNP_SOAP_E_INVALID_ARGS; 
+                    }
+                }
+                else
+                {
+                    // 无法找到NewVolume参数
                     if( volumeList )
                         ixmlNodeList_free( volumeList );
+                    UpnpActionRequest_set_ErrCode( request, UPNP_SOAP_E_INVALID_ARGS );
+                    return UPNP_SOAP_E_INVALID_ARGS;
                 }
+            }
+            else
+            {
+                // 无法获取Action请求文档
+                UpnpActionRequest_set_ErrCode( request, UPNP_SOAP_E_INVALID_ARGS );
+                return UPNP_SOAP_E_INVALID_ARGS;
             }
         }
         else if( strcmp( actionName, "GetVolume" ) == 0 )

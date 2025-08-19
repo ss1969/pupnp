@@ -1,4 +1,4 @@
-#include "HeadphoneClient.h"
+﻿#include "HeadphoneClient.h"
 #include <thread>
 #include <chrono>
 #include <algorithm>
@@ -354,4 +354,44 @@ int HeadphoneClient::DiscoveryCallback( Upnp_EventType eventType, const void *ev
     }
 
     return UPNP_E_SUCCESS;
+}
+
+void HeadphoneClient::ShowVolumeControlWindow(const std::string& deviceId)
+{
+    m_currentDeviceId = deviceId;
+    
+    if( !m_volumeWindow.IsWindowCreated() )
+    {
+        m_volumeWindow.CreateClientWindow( "音量控制" );
+        
+        // 设置音量变化回调
+        m_volumeWindow.SetVolumeChangeCallback([this](int volume) {
+            if( !m_currentDeviceId.empty() )
+            {
+                SetVolume( m_currentDeviceId, (unsigned char)volume );
+            }
+        });
+        
+        // 获取当前音量并设置到窗口
+        int currentVolume = GetVolume( deviceId );
+        if( currentVolume >= 0 )
+        {
+            m_volumeWindow.SetVolume( currentVolume );
+        }
+    }
+    
+    m_volumeWindow.Show();
+}
+
+void HeadphoneClient::HideVolumeControlWindow()
+{
+    m_volumeWindow.Hide();
+}
+
+void HeadphoneClient::ProcessWindowMessages()
+{
+    if( m_volumeWindow.IsWindowCreated() )
+    {
+        m_volumeWindow.ProcessMessages();
+    }
 }

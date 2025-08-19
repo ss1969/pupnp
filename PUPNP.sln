@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ixml_static", "ixml\ixml_static.vcxproj", "{DC085047-D57F-3345-8CBA-6468118E55F0}"
 EndProject
@@ -10,11 +10,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "upnp_static", "upnp\upnp_st
 		{DC085047-D57F-3345-8CBA-6468118E55F0} = {DC085047-D57F-3345-8CBA-6468118E55F0}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HeadphoneDevice", "HeadphoneDevice\HeadphoneDevice.vcxproj", "{12345678-1234-1234-1234-123456789ABC}"
-	ProjectSection(ProjectDependencies) = postProject
-		{8F998AFE-23FA-3B3D-875B-FBB74495019D} = {8F998AFE-23FA-3B3D-875B-FBB74495019D}
-		{DC085047-D57F-3345-8CBA-6468118E55F0} = {DC085047-D57F-3345-8CBA-6468118E55F0}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Headphone", "Headphone\Headphone.vcxproj", "{E0336C42-3441-4E45-AA0A-E630DDCF6D94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +26,10 @@ Global
 		{8F998AFE-23FA-3B3D-875B-FBB74495019D}.Debug|x64.Build.0 = Debug|x64
 		{8F998AFE-23FA-3B3D-875B-FBB74495019D}.Release|x64.ActiveCfg = Release|x64
 		{8F998AFE-23FA-3B3D-875B-FBB74495019D}.Release|x64.Build.0 = Release|x64
-		{12345678-1234-1234-1234-123456789ABC}.Debug|x64.ActiveCfg = Debug|x64
-		{12345678-1234-1234-1234-123456789ABC}.Debug|x64.Build.0 = Debug|x64
-		{12345678-1234-1234-1234-123456789ABC}.Release|x64.ActiveCfg = Release|x64
-		{12345678-1234-1234-1234-123456789ABC}.Release|x64.Build.0 = Release|x64
+		{E0336C42-3441-4E45-AA0A-E630DDCF6D94}.Debug|x64.ActiveCfg = Debug|x64
+		{E0336C42-3441-4E45-AA0A-E630DDCF6D94}.Debug|x64.Build.0 = Debug|x64
+		{E0336C42-3441-4E45-AA0A-E630DDCF6D94}.Release|x64.ActiveCfg = Release|x64
+		{E0336C42-3441-4E45-AA0A-E630DDCF6D94}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

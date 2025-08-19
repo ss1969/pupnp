@@ -58,5 +58,7 @@
         "xstring": "cpp",
         "xtr1common": "cpp",
         "xutility": "cpp"
-    }
+    },
+    "terminal.integrated.suggest.enabled": true,
+    "terminal.integrated.shellIntegration.enabled": true
 }

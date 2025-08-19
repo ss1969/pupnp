@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <string>
 #include <vector>
@@ -7,6 +7,7 @@
 
 #include "upnp.h"
 #include "ixml.h"
+#include "VolumeWindow.h"
 
 struct UpnpDeviceInfo {
     std::string deviceType;
@@ -38,11 +39,18 @@ public:
                           unsigned char endVolume,
                           int steps,
                           int durationMs);
+    
+    // GUI相关方法
+    void ShowVolumeControlWindow(const std::string& deviceId);
+    void HideVolumeControlWindow();
+    void ProcessWindowMessages();
 
 private:
     static int DiscoveryCallback(Upnp_EventType eventType, const void* event, void* cookie);
 
     UpnpClient_Handle m_clientHandle;
     std::vector<UpnpDeviceInfo> m_discoveredDevices;
+    VolumeWindow m_volumeWindow;
+    std::string m_currentDeviceId;
     static HeadphoneClient* s_instance;
 };
