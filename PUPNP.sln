@@ -11,6 +11,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "upnp_static", "upnp\upnp_st
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Headphone", "Headphone\Headphone.vcxproj", "{E0336C42-3441-4E45-AA0A-E630DDCF6D94}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F998AFE-23FA-3B3D-875B-FBB74495019D} = {8F998AFE-23FA-3B3D-875B-FBB74495019D}
+		{DC085047-D57F-3345-8CBA-6468118E55F0} = {DC085047-D57F-3345-8CBA-6468118E55F0}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

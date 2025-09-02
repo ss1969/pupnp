@@ -33,9 +33,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="$(SolutionDir)ixml\CMakeLists.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{F836A9D2-105E-37F7-AF2F-C3245CD67F95}</UniqueIdentifier>
     </Filter>

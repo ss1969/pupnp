@@ -57,7 +57,8 @@
         "xmemory": "cpp",
         "xstring": "cpp",
         "xtr1common": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "autoconfig.h": "c"
     },
     "terminal.integrated.suggest.enabled": true,
     "terminal.integrated.shellIntegration.enabled": true
