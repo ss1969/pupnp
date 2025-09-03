@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
@@ -41,17 +41,18 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)lib\win\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">upnp_static.dir\$(Configuration)\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libupnpsd</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)lib\win\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">upnp_static.dir\$(Configuration)\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libupnps</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)config;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)include\pupnp;$(SolutionDir)upnp\src\inc;$(SolutionDir)config;$(SolutionDir)build\upnp\inc;$(SolutionDir)include\ixml;$(SolutionDir)ixml\src\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Projects/pupnp-branch-1.14.x/build/pthreads/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -75,10 +76,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;UPNP_STATIC_LIB;LIBUPNP_EXPORTS;STATS;DEBUG;UPNP_USE_MSVCPP;_LARGE_FILES;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)include\pupnp;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)include\ixml;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)include\pupnp;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)include\ixml;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -91,7 +92,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)config;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)include\pupnp;$(SolutionDir)upnp\src\inc;$(SolutionDir)config;$(SolutionDir)build\upnp\inc;$(SolutionDir)include\ixml;$(SolutionDir)ixml\src\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Projects/pupnp-branch-1.14.x/build/pthreads/include"</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -110,16 +111,15 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UPNP_STATIC_LIB;LIBUPNP_EXPORTS;UPNP_USE_MSVCPP;_LARGE_FILES</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UPNP_STATIC_LIB;LIBUPNP_EXPORTS;UPNP_USE_MSVCPP;_LARGE_FILES;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)include\pupnp;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)include\ixml;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)upnp\inc;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)ixml\inc;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)upnp\src\threadutil;$(SolutionDir)include\pupnp;$(SolutionDir)upnp\src\inc;$(SolutionDir)build;$(SolutionDir)build\upnp\inc;$(SolutionDir)include\ixml;$(SolutionDir)ixml\src\inc;$(SolutionDir)build\pthreads\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
